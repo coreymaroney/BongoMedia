@@ -17,8 +17,16 @@ function FilmDropdown({ selectedFilm, isLoading }) {
         value={film}
         label="Film"
         onChange={(e) => setFilm(e.target.value)}
+        sx={{
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#55cbff",
+          },
+          "& .MuiSvgIcon-root": {
+            color: "#55cbff",
+          },
+        }}
       >
-        <MenuItem value={""}>None</MenuItem>
+        <MenuItem value={""}>Please select a movie . . .</MenuItem>
         <MenuItem value={"A New Hope"}>A New Hope</MenuItem>
         <MenuItem value={"The Empire Strikes Back"}>
           The Empire Strikes Back

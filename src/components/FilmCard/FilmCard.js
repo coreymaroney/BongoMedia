@@ -1,5 +1,4 @@
 import React from "react";
-// import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
 function FilmCard({ filmDetails }) {
   const cards = filmDetails.map((film) => {
@@ -7,14 +6,16 @@ function FilmCard({ filmDetails }) {
       <div className="film" key={film.episode_id}>
         <h1 className="title">{film.title}</h1>
         <p className="created">
-          <span > Release date: </span>
-        {film.release_date}
+          <b> Release date: </b>
+          {film.release_date}
         </p>
-        <p className="opening-crawl">{film.opening_crawl}</p>
+        <p className="opening-crawl">
+          <i>{film.opening_crawl}</i>
+        </p>
       </div>
     );
   });
-  return cards;
+  return <div>{cards.length ? cards : <h3>No Film data available.</h3>}</div>;
 }
 
 export { FilmCard };
