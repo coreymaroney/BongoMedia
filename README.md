@@ -4,7 +4,7 @@ First of all, thank you for taking the time to check out my work! I completed th
 
 ## Clone the project to your local system
 ### `git clone https://github.com/coreymaroney/BongoMedia.git`
-Navigate into  the project repository using
+## Navigate into  the project repository using
 ### `cd BongoMedia`
 ## Install the dependencies
 
