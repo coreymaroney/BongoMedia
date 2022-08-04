@@ -1,5 +1,10 @@
 # Take home assignment for Bongo Media
 First of all, thank you for taking the time to check out my work! I completed this project as a web deployment using React.
+
+I've provided two methods of viewing the project.
+1. This app is deployed live on https://coreymaroney.github.io/BongoMedia/
+
+2. If you've prefer to run this locally on your system, follow the standard procedure below.
 # Running this project
 
 ## Clone the project to your local system
