@@ -1,4 +1,4 @@
-# Take home assignment for Jock MKT
+# Take home assignment for Bongo Media
 First of all, thank you for taking the time to check out my work! I completed this project as a web deployment using React. I have included a separate, short write-up attached as a PDF in the submission email.
 # Running this project
 
