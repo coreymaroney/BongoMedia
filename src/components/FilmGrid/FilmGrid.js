@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { requestFilm, requestFilmInWookiee } from "../../server/";
 import { Grid, Container, Switch, FormControlLabel } from "@mui/material";
 import { FilmDropdown } from "../FilmDropdown";
 import { FilmCard } from "../FilmCard";
@@ -7,29 +8,24 @@ function FilmGrid() {
   const [filmDetails, setFilmDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [languageToWookie, setLanguageToWookie] = useState(false);
-  const [currentTitle, setCurrentTitle] = useState('');
+  const [currentTitle, setCurrentTitle] = useState("");
 
+  // Trigger API call when switch is toggled
   useEffect(() => {
     selectedFilm(currentTitle);
   }, [languageToWookie]);
 
   const selectedFilm = async (title) => {
     setCurrentTitle(title);
-    if (title !== "" && !languageToWookie) {
+    if (title && !languageToWookie) {
       setIsLoading(true);
-      const response = await fetch(
-        `https://swapi.dev/api/films/?search=${title}`
-      );
-      const filmData = await response.json();
+      const filmData = await requestFilm(title);
       setFilmDetails(filmData.results);
       setIsLoading(false);
-    } else if (title !== "" && languageToWookie) {
+    } else if (title && languageToWookie) {
       try {
         setIsLoading(true);
-        const response = await fetch(
-          `https://swapi.dev/api/films/?search=${title}/?format=wookiee`
-        );
-        const filmData = await response.json();
+        const filmData = await requestFilmInWookiee(title);
         setFilmDetails(filmData.results);
         setIsLoading(false);
       } catch (err) {
@@ -40,17 +36,16 @@ function FilmGrid() {
     }
   };
 
-  const convertToWookie = (e) => {
-    setLanguageToWookie(e.target.checked);
-  };
-
   return (
     <Container maxWidth="md">
       <Grid item xs={12}>
         <FilmDropdown selectedFilm={selectedFilm} isLoading={isLoading} />
         <FormControlLabel
           control={
-            <Switch onChange={convertToWookie} checked={languageToWookie} />
+            <Switch
+              onChange={(e) => setLanguageToWookie(e.target.checked)}
+              checked={languageToWookie}
+            />
           }
           label="Convert to wookiee language"
         />
