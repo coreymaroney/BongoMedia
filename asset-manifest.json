@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BongoMedia/static/css/main.da737960.css",
+    "main.js": "/BongoMedia/static/js/main.5b6ce0b8.js",
+    "static/js/787.64a2308c.chunk.js": "/BongoMedia/static/js/787.64a2308c.chunk.js",
+    "index.html": "/BongoMedia/index.html",
+    "main.da737960.css.map": "/BongoMedia/static/css/main.da737960.css.map",
+    "main.5b6ce0b8.js.map": "/BongoMedia/static/js/main.5b6ce0b8.js.map",
+    "787.64a2308c.chunk.js.map": "/BongoMedia/static/js/787.64a2308c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da737960.css",
+    "static/js/main.5b6ce0b8.js"
+  ]
+}
