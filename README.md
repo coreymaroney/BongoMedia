@@ -12,4 +12,5 @@ First of all, thank you for taking the time to check out my work! I completed th
 
 ## Run the web deployment
 ### `npm start`
-After this completes, you will be able to see the project by navigating to `localhost:3000` on your web browser. (Ironically, based on our last conversation about shaping your users) Please use Google Chrome for the best optimization.
+
+Your preferred web browser _should_ automatically open the project at this point. If it didn't, navigate to `localhost:3000` on your web browser. (Ironically, based on our last conversation about shaping your users) Please use Google Chrome for the best optimization.
